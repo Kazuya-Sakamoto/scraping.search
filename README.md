@@ -6,7 +6,7 @@
 - JavaScript 
 - MySQL
 
-##　使用gem
+## 使用gem
 - gem 'haml-rails'
 - gem 'pry-rails'
 - gem 'devise'

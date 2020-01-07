@@ -1,24 +1,64 @@
-# README
+# Environment
+- Ruby 2.5.1
+- Rails 5.2.4
+- Haml
+- SCSS
+- JavaScript 
+- MySQL
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##　使用gem
+- gem 'haml-rails'
+- gem 'pry-rails'
+- gem 'devise'
+- gem 'mechanize'
+- gem 'kaminari'
 
-Things you may want to cover:
+# scraping.search DB設計
 
-* Ruby version
+## users テーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string||null: false|
+|password|string|null: false|
+### Asociation
+- has_many :comments
+- has_many :posts
 
-* System dependencies
+## posts テーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|text|null: false|
+|user_id|refrences|null: false, foregin_key :true|
+### Asociation
+- belongs_to :user
+- has_many :comments
+- has_many :post_categories
+- has_many :categories, through: :post_categories
 
-* Configuration
+## comments テーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|string||null: false|
+|user_id|refrences|null: false, foregin_key :true|
+|goal_id|refrences|null: false, foregin_key :true|
+### Asociation
+- belongs_to :post
+- belongs_to :user  
 
-* Database creation
+## category
+|Column|Type|Options|
+|------|----|-------|
+|name|string|
+### Asociation
+- has_many :post_categories
+- has_many :posts, through: :post_categories
 
-* Database initialization
+## post_categories
+|Column|Type|Options|
+|------|----|-------|
+|user_id|refrences|null: false, foregin_key :true|
+|goal_id|refrences|null: false, foregin_key :true|
+### Asociation
+ - belongs_to :post
+ - belongs_to :category
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

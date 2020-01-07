@@ -1,0 +1,16 @@
+.wrapper
+  = render partial: "header"
+  .wrapper__container
+    .wrapper__container__character
+      = image_tag 'chara.png', class:'chara'
+    - @posts.each do |post|
+      = link_to post.title, post_path(post.id), class: "top--title"
+      .wrapper__container__content
+        -# = post.content
+  .wrapper__footer
+    .wrapper__footer__log
+      - if user_signed_in? 
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log--out"
+      - else
+        = link_to "ログイン", new_user_session_path, class: "log--in"
+        = link_to "新規登録", new_user_registration_path, class: "sign--in"

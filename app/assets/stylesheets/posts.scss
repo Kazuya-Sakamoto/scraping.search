@@ -1,0 +1,134 @@
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  &__center{
+    width: 90vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    .top--title{
+      text-decoration: none;
+      color: blue;
+    }
+    .top--title:hover{
+      opacity: 0.6;
+      text-decoration-line: underline;
+    }
+  }
+  &__top{
+    height: 40px;
+    margin: 0;
+    padding: 20px 20px 3px;
+    border-bottom: solid 1px #ccc;
+    vertical-align: middle;
+    &__left{
+      display: flex;
+      .log{
+        width: 100px;
+      }
+      .index{
+        text-decoration-line: none;
+        color: black;
+      }
+      .index:hover{
+        opacity: 0.6;
+      }
+      &__box{
+        margin-left: 10px;
+        color: black;
+        text-decoration: none;
+        .new-set{
+          color: rgb(58, 58, 58);
+          text-decoration: none;
+        }
+        .new-set:hover{
+          opacity: 0.6;
+        }
+      }
+      &__search{
+        .search-form{
+          margin-left: 20px;
+          .search-input{
+            width: 500px;
+            height: 30px;
+          }
+          .search-btn{
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+            width: 50px;
+            height: 34px;
+          }
+        }
+      }
+    }
+  }
+  &__container{
+    width: 65vw;
+    height: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #FFFFFF;
+    &__character{ 
+      width: 80vw;
+      height: 70vh;
+      margin-left: 200px;
+      .chara{
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+    }
+    .top--title{
+      text-decoration: none;
+      color: blue;
+    }
+    .top--title:hover{
+      opacity: 0.6;
+      text-decoration-line: underline;
+    }
+    &__content{
+      width: 100%;
+      // background-color: rgba(230, 230, 230, 0.582);
+      height: 5%;
+      padding: 15px;
+    }
+  }
+  &__footer{
+    bottom: 32px;
+    font-size: 13px;
+    height: 160px;
+    right: 32px;
+    width: 160px;
+    position: fixed;
+    z-index: 2;
+    text-decoration: none;
+    &__log{
+      width: 150px;
+      height: 120px;
+      padding-top: 30px;
+      background-color: rgba(1, 111, 255, 0.678);
+      // border-radius: 50%;
+      color: rgb(7, 7, 7);
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      .log--in{
+        text-decoration: none;
+        color: rgb(236, 236, 236);
+        padding: 30px;
+      }
+      .log--out{
+        text-decoration: none;
+        color: rgb(236, 236, 236);
+        padding: 30px;
+      }
+      .sign--in{
+        text-decoration: none;
+        color: rgb(236, 236, 236);
+        padding: 30px;
+      }
+    }
+  }
+}

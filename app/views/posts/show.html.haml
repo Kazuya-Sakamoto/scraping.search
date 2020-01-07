@@ -1,0 +1,22 @@
+= render partial: "header"
+.post
+  .post__header
+    .post__header__Title
+      = @post.title
+      <
+      = @post.created_at.strftime("%Y-%m-%d%H:%M") 
+      >
+    -# = simple_format @post.content
+  .post__comments
+    %h1 ■ このスレッドは過去ログ倉庫に格納されています
+    - if @comments
+      - @comments.each do |comment|
+        %p.thread
+          = comment.text
+        %p.time
+          = comment.created_at.strftime("%Y-%m-%d%H:%M") 
+    - if user_signed_in?
+      = form_with model: [@post, @comment], local: true do |f|
+        = f.text_area :text, placeholder: :コメント, class: 'text'
+        = f.submit 'send', class: 'send'
+

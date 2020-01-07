@@ -1,0 +1,13 @@
+= render partial: "header"
+.container
+  .container__middle
+    .container__middle__top
+      スレ新規作成
+    .container__middle__center
+      = form_with model: @post, local: true do |f|
+        .container__middle__center__title
+          = f.text_field :title, placeholder: :タイトル, class: 'title'
+        .container__middle__center__category
+          <カテゴリ一覧>
+          = f.collection_check_boxes :category_ids, Category.all, :id, :name, class: "category"
+        = f.submit '投稿', placeholder: :投稿, id: 'bottonn'

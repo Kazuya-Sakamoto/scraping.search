@@ -1,0 +1,44 @@
+.post{
+  width: 100vw;
+  height: 100vh;
+  &__header{
+    padding: 30px;
+    width: 100%;
+    height: 6vh;
+    background-color: #f2f3f7;
+    &__Title{
+      color: #697699;
+      padding: 10px;
+    }
+    &__Date{
+      color: #697699;
+      padding: 1px;
+    }
+  }
+  &__comments{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    h1{
+      color: green;
+    }
+    .time{
+      color: blue;
+      padding: 0 0 35px 0;
+      .thread{
+        padding: 20px 0px;
+      }
+    }
+    .text{
+      width: 80vw;
+      height: 100px;
+    }
+    .send{ 
+      width: 60px;
+      height: 30px;
+      background-color: red;
+      color: #FFFFFF;
+      border-radius: 50%;
+    }
+  }
+}

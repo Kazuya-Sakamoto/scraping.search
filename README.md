@@ -49,7 +49,7 @@
 - belongs_to :post
 - belongs_to :user  
 
-## category
+## categories
 |Column|Type|Options|
 |------|----|-------|
 |name|string|

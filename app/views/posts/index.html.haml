@@ -6,7 +6,6 @@
     - @posts.each do |post|
       = link_to post.title, post_path(post.id), class: "top--title"
       .wrapper__container__content
-        -# = post.content
   .wrapper__footer
     .wrapper__footer__log
       - if user_signed_in? 

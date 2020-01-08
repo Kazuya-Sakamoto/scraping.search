@@ -67,7 +67,6 @@ gem 'pry-rails'
 
 gem 'devise'
 
-# gem 'nokogiri'
 
 gem 'mechanize'
 

@@ -15,17 +15,9 @@ class Posts::SearchesController < ApplicationController
           else
             articles << ele
           end
-          # match_keyword(title, search, e)
         end
         return articles
       end
-
-      # def match_keyword(title, search, element)
-      #   unless title.match(/.+#{search}/) == nil
-      #     articles << element
-      #   end
-      # end
-    # end
     @articles = scrape(params[:keyword])
   end
 end

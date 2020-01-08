@@ -18,12 +18,6 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user)
   end
 
-  # def search
-  #   @posts = Post.search(params[:keyword])
-  #   @articles = scrape(search)
-  #   binding.pry
-  # end
-
   private
   def post_params
     params.require(:post).permit(:title, :content, category_ids: [] ).merge(user_id: current_user.id)
